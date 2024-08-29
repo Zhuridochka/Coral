@@ -1,1 +1,28 @@
 // Заголовки, загальні БЕМ блоки та інше...
+
+// Logo
+.logo {
+  font-family: 'AmstelvarAlpha', serif;
+  font-size: toRem(28);
+  display: flex;
+  align-items: center;
+  gap: toRem(10);
+
+  &::before,
+  &::after {
+    content: '';
+    background: url('../img/iconsfont/logo.svg') 0 center / 100% no-repeat;
+    block-size: toRem(15);
+    inline-size: toRem(31);
+    aspect-ratio: 15 / 31;
+    flex-shrink: 0;
+
+    @media (max-width:$mobileSmall) {
+      display: none;
+    }
+  }
+
+  @media (max-width:$mobileSmall) {
+    font-size: toRem(24);
+  }
+}
