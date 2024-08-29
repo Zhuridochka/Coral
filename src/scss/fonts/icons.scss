@@ -23,6 +23,10 @@
 	}
 }
 
+._icon-across:before {
+	content: "\e904";
+}
+
 ._icon-arrow:before {
 	content: "\e900";
 }
@@ -37,10 +41,6 @@
 
 ._icon-filter:before {
 	content: "\e903";
-}
-
-._icon-logo:before {
-	content: "\e904";
 }
 
 ._icon-search:before {

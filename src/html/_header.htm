@@ -3,11 +3,17 @@
 		<div class="header__top top-header">
 			<nav class="top-header__items">
 				<div class="top-header__item">
-					<form action="#google.com" class="top-header__search" href="#">
-						<button class="top-header__button" type="submit">
-							<img src="@img/iconsfont/search.svg" alt="Icon search">
+					<form action="#" class="top-header__search search-header">
+
+						<div class="search-header__body">
+							<input class="search-header__input" min-length="3" required autocomplete="off" type="text" name="for[data]" data-error="Помилка">
+							<button class="search-header__button _icon-search" type="submit">
+							</button>
+						</div>
+						<button class="search-header__open">
+							<span class=" _icon-search"></span>
+							<span class=" _icon-across"></span>
 						</button>
-						<input class="top-header__input" type="search">
 					</form>
 				</div>
 				<div class="top-header__item">
