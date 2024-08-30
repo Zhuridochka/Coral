@@ -23,6 +23,14 @@
 	}
 }
 
+._icon-like:before {
+	content: "\e906";
+}
+
+._icon-send:before {
+	content: "\e90c";
+}
+
 ._icon-across:before {
 	content: "\e904";
 }

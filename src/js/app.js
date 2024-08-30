@@ -45,7 +45,7 @@ flsFunctions.menuInit();
 Документація: https://template.fls.guru/template-docs/modul-spojlery.html
 Сніппет (HTML): spollers
 */
-// flsFunctions.spollers();
+//flsFunctions.spollers();
 
 /*
 Модуль "Таби"
@@ -59,7 +59,7 @@ flsFunctions.menuInit();
 Документація: https://template.fls.guru/template-docs/modul-pokazat-eshhjo.html
 Сніппет (HTML): showmore
 */
-// flsFunctions.showMore();
+//flsFunctions.showMore();
 
 /*
 Модуль "До/Після"
@@ -120,7 +120,7 @@ flsForms.formFieldsInit({
 // flsForms.formSubmit();
 
 /* Модуль форми "кількість" */
-// flsForms.formQuantity();
+//flsForms.formQuantity();
 
 /* Модуль зіркового рейтингу */
 // flsForms.formRating();
