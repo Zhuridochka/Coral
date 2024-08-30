@@ -8,11 +8,31 @@
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page">
-			<div class="page__text _icon-s-twitter">
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni debitis iusto deleniti consequuntur. Quaerat culpa sequi enim quidem dignissimos eos tenetur illo veniam provident optio? Nostrum sequi minima cumque? Fugit!
-				</p>
-			</div>
+			<section class="page__hero hero">
+				<div class="hero__container">
+					<div class="hero__content">
+						<h1 class="hero__title title">Collections</h1>
+						<div class="hero__text">
+							<p>
+								you can explore ans shop many differnt collection
+								from various barands here.
+							</p>
+						</div>
+						<button class="hero__button button" type="button">
+							<span class="button__icon _icon-cart"></span>
+							<span class="button__text">shop now</span>
+						</button>
+					</div>
+					<a href="#" class="hero__column-image">
+						<div class="hero__image-wripper">
+							<img class="hero__image ibg" src="@img/hero/hero.jfif" alt="Image women in white clothes">
+						</div>
+					</a>
+				</div>
+				<img class="hero__frame-left" src="@img/hero/flower_01.png" alt="Фонове зображення гілочки сірого кольору ліворуч">
+				<img class="hero__frame-right" src="@img/hero/flower_02.png" alt="Фонове зображення гілочки сірого кольору праворуч">
+			</section>
+
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>

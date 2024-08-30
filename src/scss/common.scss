@@ -1,6 +1,6 @@
 // Заголовки, загальні БЕМ блоки та інше...
 
-// Logo
+//===Logo
 .logo {
   font-family: 'AmstelvarAlpha', serif;
   font-size: toRem(28);
@@ -27,12 +27,31 @@
   }
 }
 
+//===Title
+.title {
+  font-family: "Roboto", sans-serif;
+  font-size: toRem(74);
+  font-weight: 300;
+  line-height: 0.743243;
+  /* 55/74 */
+  text-transform: capitalize;
+
+  @media (max-width: toEm(600)) {
+    font-size: toRem(60);
+    line-height: 0.916667;
+    /* 55/60 */
+  }
+}
+
 //===Button
 .button {
   display: inline-flex;
+  flex-shrink: 1;
   align-items: center;
+  justify-content: center;
   column-gap: toRem(8);
   padding: toRem(19) toRem(26);
+  background-color: $bgBlackColor;
   color: $whiteColor;
   transition: color 0.4s;
 
@@ -118,6 +137,7 @@
   &__body {
     position: relative;
 
+
     @media (any-hover: hover) {
       &:hover {
         .info-row {
@@ -138,6 +158,7 @@
     block-size: 100%;
     aspect-ratio: 312 / 400;
     overflow: hidden;
+    box-shadow: 0 toRem(4) toRem(4) rgba(0, 0, 0, 0.25);
   }
 
   // .item-product__image
