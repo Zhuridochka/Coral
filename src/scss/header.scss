@@ -80,7 +80,15 @@
   }
 
   // .top-header__logo
-  &__logo {}
+  &__logo {
+
+    &::before,
+    &::after {
+      @media (max-width:$mobileSmall) {
+        display: none;
+      }
+    }
+  }
 
   // .top-header__accounts
   &__accounts {}

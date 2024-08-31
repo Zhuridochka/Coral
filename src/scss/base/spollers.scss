@@ -4,12 +4,28 @@
 // Блок зі спойлерами
 .spollers {
 	display: grid;
+	grid-template-columns: repeat(3, minmax(200px, 1fr));
 	gap: 15px;
+
+	@media (max-width: toEm(660)) {
+		grid-template-columns: minmax(200px, 1fr);
+		grid-template-rows: repeat(3, auto);
+		justify-content: center;
+		text-align: center;
+	}
 }
+
+
 
 // Спойлер
 .spollers__item {
-	font-size: toRem(20);
+	flex-shrink: 1;
+
+	@media (min-width: toEm(660)) {
+		flex-basis: toRem(200);
+		flex-shrink: 0;
+		font-size: toRem(20);
+	}
 }
 
 // Заголовок спойлера
@@ -17,11 +33,19 @@
 	width: 100%;
 	cursor: default;
 	text-align: left;
-	border: 1px solid #eee;
-	padding: toRem(10) toRem(15);
-	border-radius: toRem(5);
 	position: relative;
 	list-style: none;
+	font-size: toRem(16);
+	font-weight: 600;
+	margin-block-end: toRem(22);
+
+	@media (max-width: toEm(660)) {
+		margin-block-end: 0;
+		background-color: #ccced0;
+		text-align: center;
+		padding-block: toRem(20);
+		border-radius: toRem(5);
+	}
 
 	&::marker,
 	&::-webkit-details-marker {
@@ -99,7 +123,12 @@
 
 // Контент спойлера
 .spollers__body {
-	padding: toRem(20);
-	border-radius: toRem(5);
-	border: 1px solid #eee;
+	font-size: toRem(14);
+	line-height: 1.714286;
+	/* 24/14 */
+	text-transform: capitalize;
+
+	&:not(:last-child) {
+		margin-block-end: toRem(12);
+	}
 }
