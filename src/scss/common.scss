@@ -83,6 +83,24 @@
       color: $primaryColor;
     }
   }
+
+  @media (max-width:$mobile) {
+    padding: toRem(12) toRem(26);
+    border-radius: toRem(5);
+
+    .button__text {
+      font-size: toRem(22);
+    }
+
+    .button__icon {
+      inline-size: toRem(25);
+
+      &::before {
+        font-size: toRem(22);
+        font-weight: 600;
+      }
+    }
+  }
 }
 
 //===Button without background (button-wbg)
