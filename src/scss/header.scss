@@ -104,7 +104,13 @@
   }
 
   // .account-item__account
-  &__account {
+  &__account {}
+
+  // .account-item__cart
+  &__cart {}
+
+  &__account,
+  &__cart {
     display: flex;
     flex-shrink: 0;
     align-items: center;
@@ -112,6 +118,7 @@
     transition: all 0.4s;
 
     span {
+      padding-block-start: toRem(3);
       font-size: toRem(18);
       font-family: 'Roboto', sans-serif;
       text-transform: capitalize;
@@ -139,45 +146,8 @@
     }
   }
 
-  // .account-item__cart
-  &__cart {
-    display: flex;
-    flex-shrink: 0;
-    align-items: center;
-    column-gap: toRem(8);
-    transition: all 0.4s;
-
-    span {
-      font-size: toRem(18);
-      font-family: 'Roboto', sans-serif;
-      text-transform: capitalize;
-    }
-
-    &::before {
-      inline-size: toRem(25);
-      aspect-ratio: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: toRem(22);
-    }
-
-    @media (any-hover: hover) {
-      &:hover {
-        color: $primaryColor;
-      }
-    }
-
-    @media (max-width:$mobile) {
-      span {
-        display: none;
-      }
-    }
-  }
-
   // .account-item__icon  
   &__icon {}
-
 }
 
 .search-header {
@@ -186,8 +156,6 @@
   padding: toRem(5) toRem(5) toRem(5) 0;
   border-radius: toRem(8);
   border: toRem(1) solid transparent;
-  // z-index: 2;
-  // max-inline-size: toRem(220);
 
   @media (any-hover: hover) {
     &:hover {
@@ -212,6 +180,7 @@
     }
 
     span {
+      padding-block-start: toRem(4);
       aspect-ratio: 1;
       position: absolute;
       inset-block-start: 50%;

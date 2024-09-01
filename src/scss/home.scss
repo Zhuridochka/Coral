@@ -234,7 +234,6 @@
 //====================================================================================================
 .hot-category {
 
-
   // .hot-category__container  
   &__container {
     position: relative;
@@ -251,7 +250,7 @@
       position: absolute;
       inset-block-end: -3%;
       /* 248/1920 */
-      inset-inline: toRem(15);
+      inset-inline-end: toRem(5);
       writing-mode: vertical-rl;
       transform: rotate(-180deg);
       margin-block-end: toRem(10);
@@ -265,7 +264,6 @@
     @media (max-width: toEm(400)) {
       font-size: toRem(26);
     }
-
   }
 
   // .hot-category__items
