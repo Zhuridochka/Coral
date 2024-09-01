@@ -92,22 +92,33 @@
 
   // .main-footer__item
   &__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-basis: toRem(20);
-    aspect-ratio: 1;
-    flex-shrink: 0;
+
+    @media (any-hover: hover) {
+      &:hover {
+        .main-footer__link {
+          transform: scale(1.2);
+
+          &::before {
+            color: $primaryColor;
+          }
+        }
+      }
+    }
   }
 
   // .main-footer__link
   &__link {
-    align-self: center;
-    justify-self: center;
-  }
+    display: flex;
+    flex-basis: toRem(25);
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
 
-  // .main-footer__image
-  &__image {}
+    &::before {
+      font-size: toRem(19);
+    }
+  }
 
   // .main-footer__spollers
   &__spollers {}

@@ -15,8 +15,6 @@
 	}
 }
 
-
-
 // Спойлер
 .spollers__item {
 	flex-shrink: 1;
@@ -40,7 +38,7 @@
 	margin-block-end: toRem(22);
 
 	@media (max-width: toEm(660)) {
-		margin-block-end: 0;
+		margin-block-end: toRem(10);
 		background-color: #ccced0;
 		text-align: center;
 		padding-block: toRem(20);
@@ -123,12 +121,20 @@
 
 // Контент спойлера
 .spollers__body {
+	display: block;
 	font-size: toRem(14);
 	line-height: 1.714286;
 	/* 24/14 */
 	text-transform: capitalize;
+	transition: all 0.4s;
 
 	&:not(:last-child) {
 		margin-block-end: toRem(12);
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: $primaryColor;
+		}
 	}
 }
