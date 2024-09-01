@@ -37,6 +37,12 @@
     line-height: 0.916667;
     /* 55/60 */
   }
+
+  &--middle {
+    font-size: toRem(50);
+    font-weight: 500;
+    line-height: normal;
+  }
 }
 
 //===Button
@@ -97,6 +103,23 @@
       }
     }
   }
+
+  &--small {
+    column-gap: toRem(4);
+    padding: toRem(5) toRem(15);
+
+    .button__icon {
+      inline-size: toRem(20);
+
+      &::before {
+        font-size: toRem(14);
+      }
+    }
+
+    .button__text {
+      font-size: toRem(16);
+    }
+  }
 }
 
 //===Button without background (button-wbg)
@@ -139,6 +162,11 @@
 
 //===Item-product
 .item-product {
+  display: none;
+
+  &.show {
+    display: block;
+  }
 
   // .item-product__link
   &__link {
