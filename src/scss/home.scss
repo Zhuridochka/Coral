@@ -29,6 +29,9 @@
 
   // .page__banner  
   &__banner {}
+
+  // .page__newsletter    
+  &__newsletter {}
 }
 
 //====================================================================================================
@@ -396,7 +399,6 @@
   min-block-size: 100vh;
   position: relative;
 
-
   // .banner__image-bg  
   &__image-bg {
     @media (max-width: toEm(767.98)) {
@@ -506,5 +508,133 @@
     right: -2.916667%;
     /* 56/1920 */
 
+  }
+}
+
+//====================================================================================================
+.newsletter {
+  background-color: $dark5Color;
+
+  // .newsletter__container
+
+  &__container {
+    padding-block: toRem(100);
+  }
+
+  // .newsletter__title
+
+  &__title {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-block-end: toRem(60);
+    }
+  }
+
+  // .newsletter__slider
+
+  &__slider {
+    &:not(:last-child) {
+      margin-block-end: toRem(70);
+    }
+  }
+
+  // .newsletter__wrapper
+
+  &__wrapper {}
+
+  // .newsletter__slide
+
+  &__slide {}
+
+  // .newsletter__swiper-scrollbar
+
+  &__swiper-scrollbar {}
+
+  // .newsletter__bottom
+
+  &__bottom {}
+}
+
+
+.bottom-newsletter {
+  display: flex;
+  flex-direction: column;
+  @include adaptiveValue("row-gap", 74, 30);
+
+
+  // .bottom-newsletter__title
+  &__title {
+    text-align: center;
+  }
+
+  // .bottom-newsletter__form
+  &__form {
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: toRem(26);
+    inline-size: toRem(770);
+  }
+
+  // .bottom-newsletter__input
+  &__input {
+    flex-grow: 0;
+    padding-block-end: toRem(9);
+    padding-inline: toRem(15);
+    border-bottom: toRem(2) solid $mainColor;
+    transition: all 0.4s;
+
+    &::placeholder {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 600;
+      text-transform: capitalize;
+      color: $dark50Color;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-bottom: toRem(2) solid $primaryColor;
+      }
+
+      &:focus {
+        border-bottom: toRem(2) solid var(--primaryColor);
+      }
+    }
+  }
+
+  // .bottom-newsletter__button
+  &__button {
+    flex: 1 0 toRem(90);
+    display: inline-flex;
+    align-items: center;
+    column-gap: toRem(5);
+    padding: toRem(0) toRem(16) toRem(10) toRem(16);
+    border-bottom: toRem(2) solid $mainColor;
+    transition: all 0.4s;
+    text-transform: capitalize;
+
+    &::before {
+      inline-size: toRem(20);
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: toRem(16);
+      transition: all 0.4s;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $primaryColor;
+        border-bottom: toRem(2) solid $primaryColor;
+
+        &::before {
+          color: $primaryColor;
+        }
+      }
+    }
   }
 }
