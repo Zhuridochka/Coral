@@ -26,6 +26,9 @@
       @include adaptiveValue("margin-block-end", 140, 70);
     }
   }
+
+  // .page__banner  
+  &__banner {}
 }
 
 //====================================================================================================
@@ -278,7 +281,7 @@
   // .hot-category__items
   &__items {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-template-rows: repeat(2, 1fr);
     gap: toRem(24);
   }
@@ -305,28 +308,32 @@
   }
 }
 
-//===Product===
+//====================================================================================================
 .product {
 
   // .product__container
-
   &__container {}
 
   // .product__title
-
   &__title {
     text-align: center;
 
     &:not(:last-child) {
       margin-block-end: toRem(35);
     }
+
+    @media (max-width:$mobile) {
+      font-size: toRem(40);
+
+      &:not(:last-child) {
+        margin-block-end: toRem(28);
+      }
+    }
   }
 
   // .product__filter
-
   &__filter {}
 }
-
 
 .filter {
 
@@ -334,12 +341,13 @@
   &__box {}
 
   // .filter__navigation
-
   &__navigation {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     column-gap: toRem(30);
+    row-gap: toRem(20);
     margin-block-end: toRem(35);
   }
 
@@ -348,6 +356,11 @@
     display: flex;
     align-items: center;
     column-gap: toRem(40);
+    row-gap: toRem(10);
+
+    @media (max-width:$mobileSmall) {
+      flex-wrap: wrap;
+    }
   }
 
   // .filter__button
@@ -366,7 +379,6 @@
   &__button-filter {}
 
   // .filter__body
-
   &__body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
@@ -374,8 +386,125 @@
   }
 
   // .filter__item
-
   &__item {}
 }
 
 .active {}
+
+//====================================================================================================
+.banner {
+  min-block-size: 100vh;
+  position: relative;
+
+
+  // .banner__image-bg  
+  &__image-bg {
+    @media (max-width: toEm(767.98)) {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        opacity: 0.7;
+        z-index: 1;
+      }
+    }
+  }
+
+  // .banner__image
+  &__image {
+    position: absolute;
+    inline-size: 100%;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    object-fit: cover;
+    aspect-ratio: 1920 / 776;
+
+    @media (max-width: toEm(767.98)) {
+      object-position: 30% 0;
+    }
+  }
+
+  // .banner__container
+  &__container {
+    min-block-size: 100vh;
+    padding-block-start: toRem(230);
+    padding-block-end: toRem(90);
+    display: flex;
+    justify-content: end;
+  }
+
+  // .banner__content
+  &__content {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    flex-direction: column;
+    row-gap: toRem(55);
+    flex-basis: toRem(504);
+    flex-shrink: 1;
+
+    @media (max-width: toEm(425)) {
+      row-gap: toRem(40);
+    }
+  }
+
+  // .banner__title
+  &__title {
+    img {
+      inline-size: toRem(190);
+      aspect-ratio: 190 / 80;
+
+      @media (max-width: toEm(425)) {
+        inline-size: toRem(170);
+      }
+    }
+  }
+
+  // .banner__text
+  &__text {
+    font-family: 'Roboto', sans-serif;
+    font-size: toRem(26);
+    line-height: 1.538462;
+    /* 40/26 */
+    text-transform: capitalize;
+    color: $whiteColor;
+
+    p {
+      &:not(:last-child) {
+        margin-block-end: toRem(15);
+      }
+    }
+
+    @media (max-width: toEm(425)) {
+      font-size: toRem(22);
+      line-height: 1.4;
+    }
+  }
+
+  // .banner__button
+  &__button {
+    @media (max-width:$mobile) {
+      inline-size: 100%;
+    }
+  }
+
+  // .banner__logo-big  
+  &__logo-big {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-basis: toRem(732);
+    aspect-ratio: 679 / 309;
+    // width: 100%;
+    // height: 100%;
+    top: 6.572165%;
+    /* 51/776 */
+    right: -2.916667%;
+    /* 56/1920 */
+
+  }
+}

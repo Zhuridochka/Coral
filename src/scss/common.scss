@@ -51,11 +51,14 @@
   flex-shrink: 1;
   align-items: center;
   justify-content: center;
-  column-gap: toRem(8);
   padding: toRem(19) toRem(26);
   background-color: $bgBlackColor;
   color: $whiteColor;
   transition: color 0.4s;
+
+  &:has(.button__icon) {
+    column-gap: toRem(8);
+  }
 
   // .button__icon
   &__icon {
@@ -118,6 +121,22 @@
 
     .button__text {
       font-size: toRem(16);
+    }
+  }
+
+  // .button--white
+  &--white {
+    display: inline-flex;
+    align-self: start;
+    background-color: #fff;
+    color: $bgBlackColor;
+    transition: all 0.5s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $primaryColor;
+        color: $whiteColor;
+      }
     }
   }
 }
@@ -385,7 +404,7 @@
   // .item-category__image
   &__image {
     inline-size: 100%;
-    block-size: 100%;
+    // block-size: 100%;
     aspect-ratio: 1;
     object-fit: cover;
   }
