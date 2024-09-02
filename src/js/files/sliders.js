@@ -197,19 +197,22 @@ function initSliders() {
         640: {
           slidesPerView: 3,
           spaceBetween: 15,
-          // autoHeight: true,
+          autoHeight: true,
         },
         768: {
           slidesPerView: 3.5,
           spaceBetween: 15,
+          autoHeight: true,
         },
         992: {
           slidesPerView: 4,
           spaceBetween: 20,
+          autoHeight: true,
         },
         1060: {
           slidesPerView: 5,
           spaceBetween: 20,
+          autoHeight: true,
         },
         1344: {
           slidesPerView: 6,
