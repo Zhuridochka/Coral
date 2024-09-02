@@ -143,7 +143,7 @@ function initSliders() {
 
       //touchRatio: 0,
       //simulateTouch: false,
-      //loop: true,
+      loop: true,
       //preloadImages: false,
       //lazy: true,
 
@@ -165,9 +165,8 @@ function initSliders() {
 			*/
 
       // Скроллбар
-
       scrollbar: {
-        el: ".swiper-scrollbar",
+        el: ".newsletter__swiper-scrollbar",
         draggable: true,
       },
 
@@ -179,46 +178,44 @@ function initSliders() {
 			*/
 
       // Брейкпоінти
-      /*
-			breakpoints: {
+      breakpoints: {
         320: {
-          slidesPerView: 1,
+          slidesPerView: 1.2,
           spaceBetween: 10,
           autoHeight: true,
         },
         375: {
-          slidesPerView: 1,
+          slidesPerView: 2,
           spaceBetween: 10,
           autoHeight: true,
         },
         435: {
-          slidesPerView: 1.2,
+          slidesPerView: 2.2,
           spaceBetween: 10,
           // autoHeight: true,
         },
         640: {
-          slidesPerView: 2,
+          slidesPerView: 3,
           spaceBetween: 15,
           // autoHeight: true,
         },
         768: {
-          slidesPerView: 2.5,
+          slidesPerView: 3.5,
           spaceBetween: 15,
         },
         992: {
-          slidesPerView: 2.8,
+          slidesPerView: 4,
           spaceBetween: 20,
         },
         1060: {
-          slidesPerView: 3,
+          slidesPerView: 5,
           spaceBetween: 20,
         },
-        1268: {
-          slidesPerView: 4,
+        1344: {
+          slidesPerView: 6,
           spaceBetween: 24,
         },
       },
-			*/
 
       // Події
       on: {},

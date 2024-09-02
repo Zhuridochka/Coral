@@ -516,13 +516,12 @@
   background-color: $dark5Color;
 
   // .newsletter__container
-
   &__container {
-    padding-block: toRem(100);
+    @include adaptiveValue("padding-block", 100, 40);
+
   }
 
   // .newsletter__title
-
   &__title {
     text-align: center;
 
