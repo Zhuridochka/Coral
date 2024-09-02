@@ -2,7 +2,7 @@
 
 //====================================================================================================
 .footer {
-  padding-block-start: toRem(70);
+  @include adaptiveValue("padding-block-start", 70, 30);
 
   // .footer__container
   &__container {
@@ -21,7 +21,6 @@
 .main-footer {
 
   // .main-footer__body
-
   &__body {
     display: flex;
     column-gap: toRem(40);
