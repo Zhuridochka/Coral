@@ -573,12 +573,12 @@
   // .filter-slider__slide
   &__slide {
     flex-basis: toRem(312);
+    inline-size: toRem(312);
     aspect-ratio: 312 / 478;
-    object-fit: cover;
     flex-shrink: 1;
 
     @media (max-width: toEm(405)) {
-      flex-basis: toRem(270);
+      flex-basis: toRem(250);
     }
   }
 }
