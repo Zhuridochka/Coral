@@ -514,3 +514,58 @@
     }
   }
 }
+
+//===Filter
+.filter {
+
+  // .filter__box
+  &__box {}
+
+  // .filter__navigation
+  &__navigation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: toRem(30);
+    row-gap: toRem(20);
+    margin-block-end: toRem(35);
+  }
+
+  // .filter__buttons
+  &__buttons {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(40);
+    row-gap: toRem(10);
+
+    @media (max-width:$mobileSmall) {
+      flex-wrap: wrap;
+    }
+  }
+
+  // .filter__button
+  &__button {
+    font-weight: 600;
+    text-transform: capitalize;
+    color: $dark50Color;
+    transition: all 0.4s;
+
+    &.active {
+      color: $mainColor;
+    }
+  }
+
+  // .filter__button-filter
+  &__button-filter {}
+
+  // .filter__body
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: toRem(24);
+  }
+
+  // .filter__item
+  &__item {}
+}

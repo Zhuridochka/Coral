@@ -28,7 +28,18 @@
   }
 
   // .page__banner  
-  &__banner {}
+  &__banner {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-block-end", 140, 70);
+    }
+  }
+
+  // .page__sellers    
+  &__sellers {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-block-end", 140, 70);
+    }
+  }
 }
 
 //====================================================================================================
@@ -335,62 +346,6 @@
   &__filter {}
 }
 
-.filter {
-
-  // .filter__box
-  &__box {}
-
-  // .filter__navigation
-  &__navigation {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    column-gap: toRem(30);
-    row-gap: toRem(20);
-    margin-block-end: toRem(35);
-  }
-
-  // .filter__buttons
-  &__buttons {
-    display: flex;
-    align-items: center;
-    column-gap: toRem(40);
-    row-gap: toRem(10);
-
-    @media (max-width:$mobileSmall) {
-      flex-wrap: wrap;
-    }
-  }
-
-  // .filter__button
-  &__button {
-    font-weight: 600;
-    text-transform: capitalize;
-    color: $dark50Color;
-    transition: all 0.4s;
-
-    &.active {
-      color: $mainColor;
-    }
-  }
-
-  // .filter__button-filter
-  &__button-filter {}
-
-  // .filter__body
-  &__body {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-    gap: toRem(24);
-  }
-
-  // .filter__item
-  &__item {}
-}
-
-.active {}
-
 //====================================================================================================
 .banner {
   min-block-size: 100vh;
@@ -506,5 +461,124 @@
     right: -2.916667%;
     /* 56/1920 */
 
+  }
+}
+
+//====================================================================================================
+.sellers {
+
+  // .sellers__container
+  &__container {}
+
+  // .sellers__title
+
+  &__title {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-block-end: toRem(35);
+    }
+
+    @media (max-width:$mobile) {
+      font-size: toRem(40);
+
+      &:not(:last-child) {
+        margin-block-end: toRem(28);
+      }
+    }
+  }
+
+  // .sellers__filter
+
+  &__filter {}
+}
+
+.filter {
+  position: relative;
+
+  // .filter__box
+  &__box {}
+
+  // .filter__navigation
+  &__navigation {}
+
+  // .filter__buttons
+  &__buttons {}
+
+  // .filter__button
+  &__button {}
+
+  // .filter__button-filter
+  &__button-filter {}
+
+  // .filter__slider
+  &__slider {}
+
+  &__swiper-button-prev,
+  &__swiper-button-next {
+    position: absolute;
+    inset-block-start: 47%;
+    /* 178/478 */
+    transform: translate(0, -50%);
+    transition: all 0.4s;
+    inline-size: toRem(40);
+    aspect-ratio: 1;
+
+    &::before {
+      inline-size: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: toRem(32);
+      color: $black25;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        &::before {
+          color: $primaryColor;
+        }
+      }
+    }
+
+    @media (max-width:$mobileSmall) {
+      inline-size: toRem(30);
+
+      &::before {
+        font-size: toRem(25);
+      }
+    }
+  }
+
+  // .filter__swiper-button-prev
+  &__swiper-button-prev {
+    inset-inline-start: toRem(10);
+
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
+
+  // .filter__swiper-button-next
+  &__swiper-button-next {
+    inset-inline-end: toRem(10);
+  }
+}
+
+.filter-slider {
+
+  // .filter-slider__body
+  &__body {}
+
+  // .filter-slider__slide
+  &__slide {
+    flex-basis: toRem(312);
+    aspect-ratio: 312 / 478;
+    object-fit: cover;
+    flex-shrink: 1;
+
+    @media (max-width: toEm(405)) {
+      flex-basis: toRem(270);
+    }
   }
 }
