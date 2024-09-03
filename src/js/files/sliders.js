@@ -28,10 +28,7 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
   // Список слайдерів
   // Перевіряємо, чи є слайдер на сторінці
-<<<<<<< HEAD
-=======
   // Filter-slider
->>>>>>> Newsletter-section
   if (document.querySelector(".filter__slider")) {
     // Вказуємо склас потрібного слайдера
     // Створюємо слайдер
@@ -83,13 +80,6 @@ function initSliders() {
         prevEl: ".filter__swiper-button-prev",
         nextEl: ".filter__swiper-button-next",
       },
-<<<<<<< HEAD
-
-      // Брейкпоінти
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-=======
 
       // Брейкпоінти
       breakpoints: {
@@ -191,49 +181,20 @@ function initSliders() {
       breakpoints: {
         320: {
           slidesPerView: 1.2,
->>>>>>> Newsletter-section
           spaceBetween: 10,
           autoHeight: true,
         },
         375: {
-<<<<<<< HEAD
           slidesPerView: 1,
-=======
-          slidesPerView: 2,
->>>>>>> Newsletter-section
           spaceBetween: 10,
           autoHeight: true,
         },
         435: {
-<<<<<<< HEAD
           slidesPerView: 1.2,
-=======
-          slidesPerView: 2.2,
->>>>>>> Newsletter-section
           spaceBetween: 10,
           // autoHeight: true,
         },
         640: {
-<<<<<<< HEAD
-          slidesPerView: 2,
-          spaceBetween: 15,
-          // autoHeight: true,
-        },
-        768: {
-          slidesPerView: 2.5,
-          spaceBetween: 15,
-        },
-        992: {
-          slidesPerView: 2.8,
-          spaceBetween: 20,
-        },
-        1060: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-        1268: {
-          slidesPerView: 4,
-=======
           slidesPerView: 3,
           spaceBetween: 15,
           autoHeight: true,
@@ -255,7 +216,6 @@ function initSliders() {
         },
         1344: {
           slidesPerView: 6,
->>>>>>> Newsletter-section
           spaceBetween: 24,
         },
       },
