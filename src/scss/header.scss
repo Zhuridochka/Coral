@@ -84,7 +84,11 @@
 
     &::before,
     &::after {
-      @media (max-width:$mobileSmall) {
+
+      // @media (max-width:$mobileSmall) {
+      //   display: none;
+      // }
+      @media (max-width: toEm(650)) {
         display: none;
       }
     }
@@ -166,8 +170,11 @@
   // .search-header__open
   &__open {
     display: none;
+    // @media (max-width:$mobileSmall){
 
-    @media (max-width: toEm(650)) {
+    // }
+
+    @media (max-width: $mobileSmall) {
       border: toRem(2) solid $dark50Color;
       border-radius: 50%;
       block-size: toRem(30);
@@ -214,14 +221,12 @@
     block-size: toRem(25);
     position: relative;
 
-    @media (max-width: toEm(650)) {
+    @media (max-width: $mobileSmall) {
       block-size: toRem(40);
       position: absolute;
-      padding: toRem(5) toRem(5) toRem(5) 0;
       border-radius: toRem(8);
       border: toRem(1) solid $primaryColor;
-      // min-inline-size: 250px;
-      inline-size: 100%;
+      inline-size: 107%;
       inset-inline-start: 0;
       inset-block-start: 100%;
       background-color: #fff;
@@ -230,9 +235,10 @@
       opacity: 0;
       visibility: hidden;
       transition: all 0.4s;
+      margin-inline-start: toRem(-15);
 
       .search-open & {
-        inset-block-start: 110%;
+        inset-block-start: 100%;
         opacity: 1;
         visibility: visible;
       }
