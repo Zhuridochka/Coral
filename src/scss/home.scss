@@ -404,7 +404,7 @@
 
 //====================================================================================================
 .banner {
-  min-block-size: 100vh;
+  min-height: 100vh;
   position: relative;
 
   // .banner__image-bg  
@@ -431,7 +431,7 @@
     inset-inline-start: 0;
     inset-block-start: 0;
     object-fit: cover;
-    aspect-ratio: 1920 / 776;
+    // aspect-ratio: 1920 / 776;
 
     @media (max-width: toEm(767.98)) {
       object-position: 30% 0;
@@ -505,16 +505,18 @@
   // .banner__logo-big  
   &__logo-big {
     position: absolute;
-    z-index: 2;
+    // z-index: 5;
     display: flex;
-    flex-basis: toRem(732);
-    aspect-ratio: 679 / 309;
-    // width: 100%;
-    // height: 100%;
+    // flex-basis: toRem(732);
+    aspect-ratio: 732 / 309;
     top: 6.572165%;
     /* 51/776 */
     right: -2.916667%;
+
     /* 56/1920 */
+    @media (max-width:$tablet) {
+      inline-size: 80%;
+    }
 
   }
 }
