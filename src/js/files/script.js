@@ -105,12 +105,16 @@ function windowLoaded() {
   // Визначення висоти Header
   function updateHeaderHeight() {
     const header = document.querySelector(".header");
+    const headerTop = document.querySelector(".header__top");
     const headerHeight = header.offsetHeight;
-
-    console.log(`Висота header: ` + headerHeight + `px`);
-
+    const headerTopHeight = headerTop.offsetHeight;
     const hero = document.querySelector(".page__hero");
-    hero.style.paddingBlockStart = `${headerHeight}px`;
+
+    if (window.innerWidth > 767.98) {
+      hero.style.marginBlockStart = `${headerHeight}px`;
+    } else {
+      hero.style.marginBlockStart = `${headerTopHeight + 20}px`;
+    }
   }
 
   updateHeaderHeight();

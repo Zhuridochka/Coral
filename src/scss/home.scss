@@ -178,10 +178,11 @@
   }
 
   @media (max-width:$tablet) {
+    height: 100vh;
 
     .hero__container {
       block-size: 100%;
-      padding-block: toRem(50);
+      // padding-block: toRem(50);
       color: $whiteColor;
     }
 
