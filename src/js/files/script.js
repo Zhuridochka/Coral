@@ -109,14 +109,11 @@ function windowLoaded() {
 
     console.log(`Висота header: ` + headerHeight + `px`);
 
-    const main = document.querySelector("main");
-    main.style.paddingBlockStart = `${headerHeight}px`;
+    const hero = document.querySelector(".page__hero");
+    hero.style.paddingBlockStart = `${headerHeight}px`;
   }
 
-  // Викликаємо функцію при завантаженні сторінки
-  window.addEventListener("load", updateHeaderHeight);
-  // Викликаємо функцію при зміні розміру вікна
-  window.addEventListener("resize", updateHeaderHeight);
+  updateHeaderHeight();
 
   document.addEventListener("click", documentActions);
   document.addEventListener("keydown", keypressActions);
