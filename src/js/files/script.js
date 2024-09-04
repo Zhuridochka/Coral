@@ -102,7 +102,7 @@ function windowLoaded() {
     filterProducts(block, selectedCategories);
   });
 
-  // Висота Header
+  // Визначення висоти Header
   function updateHeaderHeight() {
     const header = document.querySelector(".header");
     const headerHeight = header.offsetHeight;
@@ -112,6 +112,7 @@ function windowLoaded() {
     const main = document.querySelector("main");
     main.style.paddingBlockStart = `${headerHeight}px`;
   }
+
   // Викликаємо функцію при завантаженні сторінки
   window.addEventListener("load", updateHeaderHeight);
   // Викликаємо функцію при зміні розміру вікна
