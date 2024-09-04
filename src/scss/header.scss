@@ -1,5 +1,21 @@
 .header {
+  position: absolute;
+  inline-size: 100%;
   background-color: $dark5Color;
+  z-index: 50;
+
+  &._header-scroll {
+    position: fixed;
+    inset-block-start: -100%;
+    background-color: $whiteColor;
+    box-shadow: 0 toRem(4) toRem(4) rgba(0, 0, 0, 0.25);
+    padding-block-end: toRem(10);
+  }
+
+  &._header-show {
+    transition: inset-block-start 0.3s ease 0s;
+    inset-block-start: 0;
+  }
 
   // .header__container
   &__container {
