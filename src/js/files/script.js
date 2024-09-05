@@ -113,7 +113,7 @@ function windowLoaded() {
     if (window.innerWidth > 767.98) {
       hero.style.marginBlockStart = `${headerHeight}px`;
     } else {
-      hero.style.marginBlockStart = `${headerTopHeight + 20}px`;
+      hero.style.marginBlockStart = `${headerTopHeight + 11}px`;
     }
   }
 

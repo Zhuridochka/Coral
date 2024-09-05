@@ -2,7 +2,7 @@
   position: absolute;
   inline-size: 100%;
   background-color: $dark5Color;
-  z-index: 50;
+  z-index: 100;
 
   &._header-scroll {
     position: fixed;
@@ -23,6 +23,7 @@
 
     @media (max-width:$tablet) {
       padding-block-start: toRem(20);
+      background-color: #fff;
     }
   }
 
@@ -100,10 +101,6 @@
 
     &::before,
     &::after {
-
-      // @media (max-width:$mobileSmall) {
-      //   display: none;
-      // }
       @media (max-width: toEm(650)) {
         display: none;
       }
@@ -186,9 +183,6 @@
   // .search-header__open
   &__open {
     display: none;
-    // @media (max-width:$mobileSmall){
-
-    // }
 
     @media (max-width: $mobileSmall) {
       border: toRem(2) solid $dark50Color;

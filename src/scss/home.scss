@@ -47,6 +47,7 @@
   overflow: hidden;
   background-color: $dark5Color;
   position: relative;
+  z-index: -1;
 
   // .hero__container
   &__container {
