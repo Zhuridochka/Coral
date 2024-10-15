@@ -9,7 +9,21 @@
     inset-block-start: -100%;
     background-color: $whiteColor;
     box-shadow: 0 toRem(4) toRem(4) rgba(0, 0, 0, 0.25);
-    padding-block-end: toRem(10);
+
+    .menu__body {
+      padding-block-start: toRem(10);
+    }
+
+    .header__container {
+      padding-block-start: toRem(15);
+    }
+
+    .top-header__items {
+      @media (min-width:$tablet) {
+        padding-block-end: toRem(10);
+      }
+    }
+
   }
 
   &._header-show {
@@ -116,7 +130,11 @@
   align-items: center;
   column-gap: toRem(22);
 
-  @media (max-width: toEm(375)) {
+  @media (max-width:$mobile) {
+    column-gap: toRem(18);
+  }
+
+  @media (max-width: $mobileSmall) {
     column-gap: toRem(15);
   }
 
@@ -197,7 +215,6 @@
     }
 
     span {
-      padding-block-start: toRem(4);
       aspect-ratio: 1;
       position: absolute;
       inset-block-start: 50%;

@@ -25,6 +25,10 @@
 		flex-shrink: 0;
 		font-size: toRem(20);
 	}
+
+	@media (max-width:$mobileSmall) {
+		margin-inline: toRem(-15);
+	}
 }
 
 // Заголовок спойлера
@@ -44,6 +48,10 @@
 		padding-inline-start: toRem(30);
 		padding-block: toRem(15);
 		border-radius: toRem(5);
+	}
+
+	@media (max-width:$mobileSmall) {
+		border-radius: 0;
 	}
 
 	&::marker,

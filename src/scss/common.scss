@@ -42,6 +42,14 @@
     font-size: toRem(50);
     font-weight: 500;
     line-height: normal;
+
+    @media (max-width:$mobile) {
+      font-size: toRem(40);
+    }
+
+    @media (max-width:$mobileSmall) {
+      font-size: toRem(33);
+    }
   }
 }
 

@@ -102,22 +102,34 @@ function windowLoaded() {
     filterProducts(block, selectedCategories);
   });
 
-  // Визначення висоти Header
-  function updateHeaderHeight() {
-    const header = document.querySelector(".header");
-    const headerTop = document.querySelector(".header__top");
-    const headerHeight = header.offsetHeight;
-    const headerTopHeight = headerTop.offsetHeight;
-    const hero = document.querySelector(".page__hero");
+  // // Визначення висоти Header
+  // function updateHeaderHeight() {
+  //   const header = document.querySelector(".header");
+  //   const headerTop = document.querySelector(".header__top");
+  //   const headerHeight = header.offsetHeight;
+  //   const headerTopHeight = headerTop.offsetHeight;
+  //   const hero = document.querySelector(".page__hero");
 
-    if (window.innerWidth > 767.98) {
-      hero.style.marginBlockStart = `${headerHeight}px`;
-    } else {
-      hero.style.marginBlockStart = `${headerTopHeight + 11}px`;
-    }
+  //   if (window.innerWidth > 767.98) {
+  //     hero.style.marginBlockStart = `${headerHeight}px`;
+  //   } else {
+  //     hero.style.marginBlockStart = `${headerTopHeight + 11}px`;
+  //   }
+  // }
+
+  // updateHeaderHeight();
+
+  //* Функція для визначення висоти у header і встановлення висоти для &:before .menu__body
+  function updateHeightMenuBodyBefore() {
+    const header = document.querySelector(".header");
+    const headerHeight = header.offsetHeight;
+    document.documentElement.style.setProperty(
+      "--header-height",
+      `${headerHeight}px`
+    );
   }
 
-  updateHeaderHeight();
+  updateHeightMenuBodyBefore();
 
   document.addEventListener("click", documentActions);
   document.addEventListener("keydown", keypressActions);

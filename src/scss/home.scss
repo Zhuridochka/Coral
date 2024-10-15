@@ -1,5 +1,6 @@
 //====================================================================================================
 .page {
+  padding-block-start: var(--header-height);
 
   // .page__hero
   &__hero {
@@ -336,8 +337,6 @@
     }
 
     @media (max-width:$mobile) {
-      font-size: toRem(40);
-
       &:not(:last-child) {
         margin-block-end: toRem(28);
       }
@@ -491,6 +490,10 @@
       }
     }
 
+    @media (max-width:$mobile) {
+      font-size: toRem(24);
+    }
+
     @media (max-width: toEm(425)) {
       font-size: toRem(22);
       line-height: 1.4;
@@ -540,7 +543,6 @@
     }
 
     @media (max-width:$mobile) {
-      font-size: toRem(40);
 
       &:not(:last-child) {
         margin-block-end: toRem(28);
@@ -587,14 +589,6 @@
     &:not(:last-child) {
       @include adaptiveValue("margin-block-end", 60, 30);
     }
-
-    @media (max-width:$mobile) {
-      font-size: toRem(40);
-    }
-
-    @media (max-width:$mobileSmall) {
-      font-size: toRem(33);
-    }
   }
 
   // .newsletter__slider
@@ -617,24 +611,21 @@
   &__bottom {}
 }
 
+//====================================================================================================
 .bottom-newsletter {
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   @include adaptiveValue("row-gap", 74, 30);
 
+  @media (max-width:$mobileSmall) {
+    align-items: center;
+  }
 
   // .bottom-newsletter__title
   &__title {
-    align-self: center;
-
-    @media (max-width:$mobile) {
-      font-size: toRem(40);
-    }
-
-    @media (max-width:$mobileSmall) {
-      font-size: toRem(33);
-    }
+    text-align: center;
   }
 
   // .bottom-newsletter__form
@@ -647,31 +638,36 @@
 
     @media (max-width:$mobileSmall) {
       column-gap: toRem(15);
+      grid-template-columns: 1fr;
+      inline-size: 100%;
     }
   }
 
   // .bottom-newsletter__input
   &__input {
-
-    padding-block-end: toRem(9);
+    padding-block: toRem(9);
     padding-inline: toRem(15);
     border-block-end: toRem(2) solid $mainColor;
     transition: all 0.4s;
+
+    @media (max-width:$mobileSmall) {
+      border-block-end: toRem(1.2) solid $mainColor;
+    }
 
     &::placeholder {
       font-family: 'Roboto', sans-serif;
       font-weight: 600;
       text-transform: capitalize;
-      color: $dark50Color;
+      color: rgba(30, 40, 50, 0.50);
     }
 
     @media (any-hover: hover) {
       &:hover {
-        border-bottom: toRem(2) solid $primaryColor;
+        border-block-end: toRem(2) solid $primaryColor;
       }
 
       &:focus {
-        border-bottom: toRem(2) solid var(--primaryColor);
+        border-block-end: toRem(2) solid var(--primaryColor);
       }
     }
   }
@@ -686,6 +682,11 @@
     border-bottom: toRem(2) solid $mainColor;
     transition: all 0.4s;
     text-transform: capitalize;
+    color: $bgBlackColor;
+
+    @media (max-width:$mobileSmall) {
+      border-block-end: toRem(1.2) solid $mainColor;
+    }
 
     &::before {
       inline-size: toRem(20);
@@ -700,7 +701,7 @@
     @media (any-hover: hover) {
       &:hover {
         color: $primaryColor;
-        border-bottom: toRem(2) solid $primaryColor;
+        border-block-end: toRem(2) solid $primaryColor;
 
         &::before {
           color: $primaryColor;
